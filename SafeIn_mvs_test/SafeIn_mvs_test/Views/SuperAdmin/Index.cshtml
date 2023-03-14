@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "User Page";
+}
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@model SafeIn_mvs_test.ViewModels.AllAdminsViewModel
+<style>
+    table {
+        border-collapse: collapse;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    th, td {
+        border: 1px solid silver;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">@localizer["AllAdmins"]</h1>
+    <a class="btn btn-primary btn-sm" href="~/SuperAdmin/CreateAdmin">@localizer["NewAdmin"]</a>
+    <table>
+        <thead>
+            <tr>
+                <th>@localizer["UserName"]</th>
+                <th>@localizer["Email"]</th>
+                <th>@localizer["Company"]</th>
+                <th>@localizer["Action"]</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var us in Model.Admins)
+            {
+                <tr>
+                    <td>@us.name</td>
+                    <td>@us.email</td>
+                    <td>@us.company</td>
+                    <th>
+                        @Html.ActionLink("Edit", "EditAdminAsync", "SuperAdmin", new { email = us.email }, null)
+                        @Html.ActionLink("Delete", "DeleteAdminAsync", "SuperAdmin", new { email = us.email }, null)
+                        
+                    </th>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

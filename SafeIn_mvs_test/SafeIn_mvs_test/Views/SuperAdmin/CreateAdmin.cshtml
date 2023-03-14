@@ -1,0 +1,48 @@
+﻿@model SafeIn_mvs_test.ViewModels.CreateAdminViewModel
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@{
+    ViewData["Title"] = "CreateEmployee";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<h2>@localizer["NewAdmin"]</h2>
+<div class="mb-md-5 mt-md-4 pb-5">
+    @using (Html.BeginForm("CreateAdminAsync", "SuperAdmin", FormMethod.Post))
+    {
+        <div class="form-outline form-white mb-4">
+            @Html.TextBoxFor(m => m.CompanyName, new { @class = "form-control", type = "userName", placeholder = @localizer["Company"].Value, required = "required"})
+            @Html.ValidationMessageFor(m => m.CompanyName, "", new { @class = "error" })
+        </div>
+        <div class="form-outline form-white mb-4">
+            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", type = "userName", placeholder = @localizer["UserName"].Value, required = "required"})
+            @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "error" })
+        </div>
+        <div class="form-outline form-white mb-4">
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email", placeholder = @localizer["Email"].Value, required = "required"})
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "error" })
+        </div>
+        <div class="form-outline form-white mb-4">
+            @Html.TextBoxFor(m => m.Password, new { @class = "form-control",type = "password", placeholder = @localizer["Password"].Value})
+            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "error" })
+        </div>
+        <div class="form-outline form-white mb-4">
+            @Html.TextBoxFor(m => m.ConfirmPassword, new { @class = "form-control",type = "password", placeholder = @localizer["ConfirmPassword"].Value})
+            @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "error" })
+        </div>
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">@localizer["Submit"]</button>
+        </div>
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="/SuperAdmin/Index" role="button">@localizer["Cancel"]</a>
+        </div>
+        @if (TempData["SuccessMessageAdminCreate"] != null)
+        {
+            <div class="alert alert-success">@localizer["SuccessMessageAdminCreate"]</div>
+        }
+        if (TempData["CreateAdminError"] != null)
+        {
+            <div class="alert alert-danger">@localizer["CreateAdminError"]</div>
+        }
+
+    }
+</div>

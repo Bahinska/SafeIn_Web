@@ -1,0 +1,44 @@
+﻿@model SafeIn_mvs_test.ViewModels.CreateEmployeeViewModel
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@{
+    ViewData["Title"] = "CreateEmployee";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<h2>@localizer["NewEmployee"]</h2>
+<div class="mb-md-5 mt-md-4 pb-5">
+    @using (Html.BeginForm("CreateEmployeeAsync", "Admin", FormMethod.Post))
+    {
+        <div class="form-outline form-white mb-4">
+            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", type = "userName", placeholder = @localizer["UserName"].Value, required = "required"})
+            @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "error" })
+        </div>
+        <div class="form-outline form-white mb-4">
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email", placeholder = @localizer["Email"].Value, required = "required"})
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "error" })
+        </div>
+        <div class="form-outline form-white mb-4">
+            @Html.TextBoxFor(m => m.Password, new { @class = "form-control",type = "password", placeholder = @localizer["Password"].Value})
+            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "error" })
+        </div>
+                <div class="form-outline form-white mb-4">
+            @Html.TextBoxFor(m => m.ConfirmPassword, new { @class = "form-control", type = "password", placeholder = @localizer["ConfirmPassword"].Value})
+            @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "error" })
+        </div>
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">@localizer["Submit"]</button>
+        </div>
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="/Admin/Index" role="button">@localizer["Cancel"]</a>
+        </div>
+        @if (TempData["SuccessMessageEmployeeCreate"] != null)
+        {
+            <div class="alert alert-success">@localizer["SuccessMessageEmployeeCreate"]</div>
+        }
+        if (TempData["CreateEmployeeError"] != null)
+        {
+            <div class="alert alert-danger">@localizer["CreateEmployeeError"]</div>
+        }
+
+    }
+</div>

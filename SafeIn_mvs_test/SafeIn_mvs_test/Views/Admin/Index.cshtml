@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Admin Page";
+}
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@model SafeIn_mvs_test.ViewModels.AllEmployeeViewModel
+<style>
+    table {
+        border-collapse: collapse;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    th, td {
+        border: 1px solid silver;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">@localizer["AllEmployees"]</h1>
+    <a class="btn btn-primary btn-sm" href="~/Admin/CreateEmployee">@localizer["NewEmployee"]</a>
+    <table>
+        <thead>
+        <tr>
+                <th>@localizer["UserName"]</th>
+                <th>@localizer["Email"]</th>
+                <th>@localizer["Action"]</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var us in Model.Employees)
+        {
+            <tr>
+                <td>@us.name</td>
+                <td>@us.email</td>
+                <th>
+                        @Html.ActionLink("Edit", "EditEmployeeAsync", "Admin", new { email = us.email }, null)
+                        @Html.ActionLink("Delete", "DeleteEmployeeAsync", "Admin", new { email = us.email }, null)
+                </th>
+            </tr>
+        }
+            </tbody>
+    </table>
+</div>
+

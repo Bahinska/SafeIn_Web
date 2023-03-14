@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\SafeIn_mvs_test.props" />
+</Project>
