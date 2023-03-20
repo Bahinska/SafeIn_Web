@@ -8,5 +8,6 @@ namespace SafeIn_mvs_test.Repositories
     {
         Task<IFlurlResponse> GetAdminsAsync();
         Task<IFlurlResponse> CreateAdminAsync(CreateAdminViewModel admin);
+        Task DeleteAdminAsync(string email);
     }
 }

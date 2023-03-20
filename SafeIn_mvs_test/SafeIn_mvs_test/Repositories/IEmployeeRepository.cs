@@ -9,5 +9,6 @@ namespace SafeIn_mvs_test.Repositories
     {
         Task<List<UserInfo>> GetEmployeesAsync();
         Task<IFlurlResponse> CreateEmployeeAsync(CreateEmployeeViewModel employee);
+        Task DeleteEmployeeAsync(string email);
     }
 }

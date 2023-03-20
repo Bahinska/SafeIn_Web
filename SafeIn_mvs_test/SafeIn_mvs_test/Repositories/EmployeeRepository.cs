@@ -23,6 +23,10 @@ namespace SafeIn_mvs_test.Repositories
         {
             return await _flurlClient.Request("/api/Admin/employees").GetJsonAsync<List<UserInfo>>();
         }
+        public async Task DeleteEmployeeAsync(string email)
+        {
+            await _flurlClient.Request("/api/Admin/employee").SetQueryParam("email", email).DeleteAsync();
+        }
 
         public async Task<IFlurlResponse> CreateEmployeeAsync(CreateEmployeeViewModel employee)
         {

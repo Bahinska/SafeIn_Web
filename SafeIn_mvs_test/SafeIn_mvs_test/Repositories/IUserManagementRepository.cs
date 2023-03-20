@@ -8,5 +8,6 @@ namespace SafeIn_mvs_test.Repositories
         Task<IFlurlResponse> LoginAsync(UserLogin user);
         Task<Tokens> RefreshTokensAsync(Tokens oldTokens);
         Task<IFlurlResponse> GetTokenInfoAsync(string token);
+        Task LogoutAsync(RevokeToken tokenToRevoke);
     }   
 }

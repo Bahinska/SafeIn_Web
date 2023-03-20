@@ -50,6 +50,7 @@ namespace SafeIn_mvs_test.Controllers
         
         public IActionResult Logout()
         {
+            _userManagementService.LogoutAsync(new RevokeToken() {refreshToken = Request.Cookies[Constants.XRefreshToken]});
             Response.Cookies.Delete(Constants.XAsseccToken);
             Response.Cookies.Delete(Constants.XRefreshToken);
             return View("Login");

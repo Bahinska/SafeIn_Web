@@ -27,5 +27,10 @@ namespace SafeIn_mvs_test.Repositories
         {
             return await _flurlClient.Request("/api/Employee/information").GetAsync();
         }
+
+        public async Task LogoutAsync(RevokeToken tokenToRevoke)
+        {
+            await _flurlClient.Request("/Auth/revoke").PatchJsonAsync(tokenToRevoke);
+        }
     }
 }
