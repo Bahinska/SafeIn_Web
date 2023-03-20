@@ -14,7 +14,19 @@
         border: 1px solid silver;
     }
 </style>
-
+<div class="modal fade" id="dialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Confirmation</h4>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete </p>
+                <img height="400" width="400" id="qr_image" src="@Url.Action("GenerateQRCode", "Employee")" alt="My Image">
+            </div>
+        </div>
+    </div>
+</div>
 <div class="text-center">
     <h1 class="display-4">@localizer["AllAdmins"]</h1>
     <a class="btn btn-primary btn-sm" href="~/SuperAdmin/CreateAdmin">@localizer["NewAdmin"]</a>

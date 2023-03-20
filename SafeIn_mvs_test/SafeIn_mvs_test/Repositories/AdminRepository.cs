@@ -17,6 +17,11 @@ namespace SafeIn_mvs_test.Repositories
             return await _flurlClient.Request("/api/SuperAdmin/admin").PostJsonAsync(admin);
         }
 
+        public async Task DeleteAdminAsync(string email)
+        {
+            await _flurlClient.Request("/api/SuperAdmin/admin").SetQueryParam("email", email).DeleteAsync();
+        }
+
         public async Task<IFlurlResponse> GetAdminsAsync()
         {
             return await _flurlClient.Request("/api/SuperAdmin/admins").GetAsync();

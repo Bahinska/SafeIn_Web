@@ -60,10 +60,10 @@ namespace SafeIn_mvs_test.Controllers
         }
         [HttpGet]
         [ActionName("DeleteAdminAsync")]
-        public IActionResult DeleteAdminAsync(string email)
+        public async Task<IActionResult> DeleteAdminAsync(string email)
         {
-            var a = 5;
-            return View(a);
+            await _adminService.DeleteAdminAsync(email);
+            return RedirectToAction("Index", "SuperAdmin");
         }
     }
 }

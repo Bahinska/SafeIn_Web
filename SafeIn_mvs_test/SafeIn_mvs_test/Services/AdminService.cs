@@ -19,6 +19,11 @@ namespace SafeIn_mvs_test.Services
             return await _adminsRepository.CreateAdminAsync(admin);
         }
 
+        public async Task DeleteAdminAsync(string email)
+        {
+            await _adminsRepository.DeleteAdminAsync(email);
+        }
+
         public async Task<List<UserInfo>> GetAdminsAsync()
         {
            var response = await _adminsRepository.GetAdminsAsync();

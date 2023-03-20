@@ -8,5 +8,6 @@ namespace SafeIn_mvs_test.Services
     {
         Task<List<UserInfo>> GetAdminsAsync();
         Task<IFlurlResponse> CreateAdminAsync(CreateAdminViewModel admin);
+        Task DeleteAdminAsync(string email);
     }
 }

@@ -9,6 +9,7 @@ namespace SafeIn_mvs_test.Services
         Task<Tokens> LoginAsync(UserLogin user);
         Task<Tokens> RefreshTokensAsync(Tokens oldTokens);
         Task<UserInfo> GetTokenInfoAsync(string token);
+        Task LogoutAsync(RevokeToken tokenToRevoke);
 
     }
 }

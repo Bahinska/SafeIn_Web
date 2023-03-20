@@ -24,6 +24,12 @@ namespace SafeIn_mvs_test.Services
             var response = await _userManagementRepository.LoginAsync(user);
             return await response.GetJsonAsync<Tokens>();
         }
+
+        public async Task LogoutAsync(RevokeToken tokenToRevoke)
+        {
+            await _userManagementRepository.LogoutAsync(tokenToRevoke);
+        }
+
         public async Task<Tokens> RefreshTokensAsync(Tokens oldTokens)
         {
             return await _userManagementRepository.RefreshTokensAsync(oldTokens);

@@ -26,7 +26,7 @@ namespace SafeIn_mvs_test.Repositories
         {
             FlurlHttp.Configure(settings => settings.HttpClientFactory = new UntrustedCertClientFactory());
             _httpContextAccessor = httpContextAccessor;
-            _flurlClient = flurlClientFactory.Get("https://safein-api.azurewebsites.net");
+            _flurlClient = flurlClientFactory.Get("https://safeinapisecondaccount.azurewebsites.net");
 
             _flurlClient.BeforeCall(flurlCall =>
             {

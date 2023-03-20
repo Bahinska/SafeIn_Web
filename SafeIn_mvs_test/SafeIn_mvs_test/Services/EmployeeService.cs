@@ -20,6 +20,11 @@ namespace SafeIn_mvs_test.Services
             return await _employeeRepository.CreateEmployeeAsync(employee);
         }
 
+        public async Task DeleteEmployeeAsync(string email)
+        {
+            await _employeeRepository.DeleteEmployeeAsync(email);
+        }
+
         public async Task<List<UserInfo>> GetEmployeesAsync()
         {
             return await _employeeRepository.GetEmployeesAsync();

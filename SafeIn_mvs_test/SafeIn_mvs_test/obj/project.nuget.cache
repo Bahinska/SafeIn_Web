@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3pxrHWlvP2dP/OWo6/jem+Ue0Xkkl4RZYtb15XcnHo/jhv6N4Gx/v9/Di6B8/6SY81p5DBgdZVPdCMCQqMKWDg==",
+  "dgSpecHash": "4VXmgm6FqaEuHAChyqN4UHnmIz0hPYnXKrfM0rShrXbqFwYXeZJE4f9XziM80UjdHa/7qV0Q/+LoZZrCxgnL6A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Professional\\source\\repos\\SafeIn_mvs_test\\SafeIn_mvs_test\\SafeIn_mvs_test.csproj",
+  "projectFilePath": "C:\\Margo\\GITHUB\\SafeIn_Web\\SafeIn_mvs_test\\SafeIn_mvs_test\\SafeIn_mvs_test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Professional\\.nuget\\packages\\analytics\\3.8.1\\analytics.3.8.1.nupkg.sha512",
     "C:\\Users\\Professional\\.nuget\\packages\\barcode\\2023.3.2\\barcode.2023.3.2.nupkg.sha512",
