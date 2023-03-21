@@ -27,18 +27,25 @@
         </tr>
         </thead>
         <tbody>
-        @foreach (var us in Model.Employees)
-        {
-            <tr>
-                <td>@us.name</td>
-                <td>@us.email</td>
-                <th>
+            @foreach (var us in Model.Employees)
+            {
+                <tr>
+                    <td>@us.name</td>
+                    <td>@us.email</td>
+                    <th>
                         @Html.ActionLink("Edit", "EditEmployeeAsync", "Admin", new { email = us.email }, null)
-                        @Html.ActionLink("Delete", "DeleteEmployeeAsync", "Admin", new { email = us.email }, null)
-                </th>
-            </tr>
-        }
-            </tbody>
+                        <a class="btn btn-danger delete"
+                       data-email="@us.email"
+                       data-controller="Admin"
+                       data-action="DeleteEmployeeAsync"
+                       data-body-message="@localizer["ConfirmMessage"] @us.name?">
+                            <i class="fas fa-trash alt"></i>
+                            @localizer["Delete"]
+                        </a>
+                    </th>
+                </tr>
+            }
+        </tbody>
     </table>
 </div>
 

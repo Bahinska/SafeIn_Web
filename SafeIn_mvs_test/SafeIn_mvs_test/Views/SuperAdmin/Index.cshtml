@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "User Page";
+    ViewData["Title"] = "Admins Page";
 }
 @inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 @model SafeIn_mvs_test.ViewModels.AllAdminsViewModel
@@ -14,19 +14,6 @@
         border: 1px solid silver;
     }
 </style>
-<div class="modal fade" id="dialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="myModalLabel">Confirmation</h4>
-            </div>
-            <div class="modal-body">
-                <p>Are you sure you want to delete </p>
-                <img height="400" width="400" id="qr_image" src="@Url.Action("GenerateQRCode", "Employee")" alt="My Image">
-            </div>
-        </div>
-    </div>
-</div>
 <div class="text-center">
     <h1 class="display-4">@localizer["AllAdmins"]</h1>
     <a class="btn btn-primary btn-sm" href="~/SuperAdmin/CreateAdmin">@localizer["NewAdmin"]</a>
@@ -47,9 +34,16 @@
                     <td>@us.email</td>
                     <td>@us.company</td>
                     <th>
+
                         @Html.ActionLink("Edit", "EditAdminAsync", "SuperAdmin", new { email = us.email }, null)
-                        @Html.ActionLink("Delete", "DeleteAdminAsync", "SuperAdmin", new { email = us.email }, null)
-                        
+                        <a class="btn btn-danger delete"
+                       data-email="@us.email"
+                       data-controller="SuperAdmin"
+                       data-action="DeleteAdminAsync"
+                       data-body-message="@localizer["ConfirmMessage"] @us.name?">
+                            <i class="fas fa-trash alt"></i>
+                            @localizer["Delete"]
+                        </a>
                     </th>
                 </tr>
             }

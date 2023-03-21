@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mVxSIRe02T6Lmcdiea5+KF7qu+Ui37Cpokgdd+r58SE=",
+  "Hash": "aNZ7/J+YKY92jfoMJg6EcGjoB0n924HsE5TlCob8MD0=",
   "Source": "SafeIn_mvs_test",
   "BasePath": "_content/SafeIn_mvs_test",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Margo\\GITHUB\\SafeIn_Web\\SafeIn_mvs_test\\SafeIn_mvs_test\\wwwroot\\js\\detete.js",
+      "SourceId": "SafeIn_mvs_test",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Margo\\GITHUB\\SafeIn_Web\\SafeIn_mvs_test\\SafeIn_mvs_test\\wwwroot\\",
+      "BasePath": "_content/SafeIn_mvs_test",
+      "RelativePath": "js/detete.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\detete.js"
     },
     {
       "Identity": "C:\\Margo\\GITHUB\\SafeIn_Web\\SafeIn_mvs_test\\SafeIn_mvs_test\\wwwroot\\js\\site.js",
