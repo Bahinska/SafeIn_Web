@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Margo\\GITHUB\\SafeIn_Web\\SafeIn_mvs_test\\SafeIn_mvs_test\\wwwroot\\js\\detete.js",
+      "PackagePath": "staticwebassets\\js\\detete.js"
+    },
+    {
       "Id": "C:\\Margo\\GITHUB\\SafeIn_Web\\SafeIn_mvs_test\\SafeIn_mvs_test\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

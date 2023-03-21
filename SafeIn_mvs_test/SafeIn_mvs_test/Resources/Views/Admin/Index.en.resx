@@ -126,6 +126,9 @@
   <data name="Company" xml:space="preserve">
     <value>Company</value>
   </data>
+  <data name="ConfirmMessage" xml:space="preserve">
+    <value>Are you sure you want to delete</value>
+  </data>
   <data name="Delete" xml:space="preserve">
     <value>Delete</value>
   </data>
