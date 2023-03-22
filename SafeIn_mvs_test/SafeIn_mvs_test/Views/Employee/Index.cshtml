@@ -16,7 +16,7 @@
 <head>
     <script defer src="modal-popup.js"></script>
 </head>
-<div class="justify-content-center">
+<div class="center">
     <h1>@localizer["Company"]: @Model.company</h1>
     <h3>@localizer["Employee"]: @Model.name</h3>
     <h5>@localizer["Email"]: @Model.email</h5>
@@ -30,3 +30,8 @@
         $('#dialog').modal('hide'); 
   }, 5000); 
 </script>
+<style>
+    .center {
+        text-align: center;
+    }
+</style>
