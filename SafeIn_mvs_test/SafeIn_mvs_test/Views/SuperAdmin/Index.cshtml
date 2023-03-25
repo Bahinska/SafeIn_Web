@@ -31,7 +31,7 @@
             @foreach (var us in Model.Admins)
             {
                 <tr>
-                    <td>@us.name</td>
+                    <td>@us.userName</td>
                     <td>@us.email</td>
                     <td>@us.company</td>
                     <th>
@@ -39,7 +39,7 @@
                        data-email="@us.email"
                        data-controller="SuperAdmin"
                        data-action="DeleteAdminAsync"
-                       data-body-message="@localizer["ConfirmMessage"] @us.name?">
+                       data-body-message="@localizer["ConfirmMessage"] @us.userName?">
                             @localizer["Delete"]
                         </a>
                     </th>

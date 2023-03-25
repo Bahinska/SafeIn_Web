@@ -30,14 +30,14 @@
             @foreach (var us in Model.Employees)
             {
                 <tr>
-                    <td>@us.name</td>
+                    <td>@us.userName</td>
                     <td>@us.email</td>
                     <th>
                        <a class="btn btn-danger delete"
                        data-email="@us.email"
                        data-controller="Admin"
                        data-action="DeleteEmployeeAsync"
-                       data-body-message="@localizer["ConfirmMessage"] @us.name?">
+                       data-body-message="@localizer["ConfirmMessage"] @us.userName?">
                             @localizer["Delete"]
                         </a>
                     </th>

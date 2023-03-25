@@ -93,7 +93,7 @@ namespace SafeIn_mvs_test.Controllers
                 EmployeeViewModel employee = new EmployeeViewModel
                 {
                     email = info.email,
-                    name = info.name,
+                    name = info.userName,
                     company = info.company
                 };
                 return RedirectToAction("Index", "Employee", employee);
@@ -105,7 +105,7 @@ namespace SafeIn_mvs_test.Controllers
         {
             var token = Request.Cookies[Constants.XAsseccToken];
             var user = GetTokenInfo(token);
-            return View(new EditModel() { email = user.email, userName = user.name });
+            return View(new EditModel() { email = user.email, userName = user.userName });
         }
 
         [HttpPost]
@@ -140,7 +140,7 @@ namespace SafeIn_mvs_test.Controllers
             var info = new UserInfo()
             {
                 email = tokenInfo["Email"],
-                name = tokenInfo["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"],
+                userName = tokenInfo["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"],
                 role = tokenInfo["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"],
                 company = tokenInfo["Company"]
             };
