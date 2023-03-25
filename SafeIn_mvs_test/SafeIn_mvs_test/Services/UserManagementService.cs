@@ -13,6 +13,11 @@ namespace SafeIn_mvs_test.Services
            _userManagementRepository = userManagementRepository;
         }
 
+        public async Task EditAsync(EditModel user)
+        {
+            await _userManagementRepository.EditAsync(user);
+        }
+
         public async Task<UserInfo> GetTokenInfoAsync(string token)
         {
             var response = await _userManagementRepository.GetTokenInfoAsync(token);

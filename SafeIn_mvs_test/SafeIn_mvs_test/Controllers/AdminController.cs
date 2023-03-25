@@ -55,13 +55,6 @@ namespace SafeIn_mvs_test.Controllers
         }
 
         [HttpGet]
-        [ActionName("EditEmployeeAsync")]
-        public IActionResult EditEmployeeAsync(string email)
-        {
-            var a = 5;
-            return View(a);
-        }
-        [HttpGet]
         [ActionName("DeleteEmployeeAsync")]
         public async Task<IActionResult> DeleteEmployeeAsync(string email)
         {

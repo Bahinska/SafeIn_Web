@@ -14,7 +14,7 @@
         border: 1px solid silver;
     }
 </style>
-
+<a href="@Url.Action("Edit", "UserManagement")"><i style="font-size:24px" class="fa">&#xf013;</i></a>
 <div class="text-center">
     <h1 class="display-4">@localizer["AllEmployees"]</h1>
     <a class="btn btn-primary btn-sm" href="~/Admin/CreateEmployee">@localizer["NewEmployee"]</a>
@@ -33,13 +33,11 @@
                     <td>@us.name</td>
                     <td>@us.email</td>
                     <th>
-                        @Html.ActionLink("Edit", "EditEmployeeAsync", "Admin", new { email = us.email }, null)
-                        <a class="btn btn-danger delete"
+                       <a class="btn btn-danger delete"
                        data-email="@us.email"
                        data-controller="Admin"
                        data-action="DeleteEmployeeAsync"
                        data-body-message="@localizer["ConfirmMessage"] @us.name?">
-                            <i class="fas fa-trash alt"></i>
                             @localizer["Delete"]
                         </a>
                     </th>
