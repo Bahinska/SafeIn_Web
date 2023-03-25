@@ -568,3 +568,5 @@ C:\Margo\GITHUB\SafeIn_Web\SafeIn_mvs_test\SafeIn_mvs_test\obj\Debug\net7.0\refi
 C:\Margo\GITHUB\SafeIn_Web\SafeIn_mvs_test\SafeIn_mvs_test\obj\Debug\net7.0\SafeIn_mvs_test.pdb
 C:\Margo\GITHUB\SafeIn_Web\SafeIn_mvs_test\SafeIn_mvs_test\obj\Debug\net7.0\SafeIn_mvs_test.genruntimeconfig.cache
 C:\Margo\GITHUB\SafeIn_Web\SafeIn_mvs_test\SafeIn_mvs_test\obj\Debug\net7.0\ref\SafeIn_mvs_test.dll
+C:\Margo\GITHUB\SafeIn_Web\SafeIn_mvs_test\SafeIn_mvs_test\obj\Debug\net7.0\SafeIn_mvs_test.Resources.Views.UserManagement.Edit.en.resources
+C:\Margo\GITHUB\SafeIn_Web\SafeIn_mvs_test\SafeIn_mvs_test\obj\Debug\net7.0\SafeIn_mvs_test.Resources.Views.UserManagement.Edit.uk.resources

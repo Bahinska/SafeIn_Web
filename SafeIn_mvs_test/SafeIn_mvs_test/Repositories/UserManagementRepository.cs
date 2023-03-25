@@ -30,7 +30,12 @@ namespace SafeIn_mvs_test.Repositories
 
         public async Task LogoutAsync(RevokeToken tokenToRevoke)
         {
-            await _flurlClient.Request("/Auth/revoke").PatchJsonAsync(tokenToRevoke);
+            await _flurlClient.Request("/Auth/revoke").PostJsonAsync(tokenToRevoke);
+        }
+
+        public async Task EditAsync(EditModel user)
+        {
+             await _flurlClient.Request("Auth/edit").PutJsonAsync(user);
         }
     }
 }

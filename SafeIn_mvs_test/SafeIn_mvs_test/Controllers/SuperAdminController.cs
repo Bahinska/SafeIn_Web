@@ -52,13 +52,6 @@ namespace SafeIn_mvs_test.Controllers
         }
 
         [HttpGet]
-        [ActionName("EditAdminAsync")]
-        public IActionResult EditAdminAsync(string email)
-        {
-            var a = 5;
-            return View(a);
-        }
-        [HttpGet]
         [ActionName("DeleteAdminAsync")]
         public async Task<IActionResult> DeleteAdminAsync(string email)
         {

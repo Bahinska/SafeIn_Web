@@ -70,6 +70,7 @@ namespace SafeIn_mvs_test.Controllers
                 var tokens = await _userManagementService.LoginAsync(userLogin);
                 Response.Cookies.Append(Constants.XAsseccToken, tokens.accessToken);
                 Response.Cookies.Append(Constants.XRefreshToken, tokens.refreshToken);
+                ViewBag.Authorized = true;
                 return Redirect(GetTokenInfo(tokens.accessToken));
             }
             catch (FlurlHttpException ex)
@@ -96,6 +97,34 @@ namespace SafeIn_mvs_test.Controllers
                     company = info.company
                 };
                 return RedirectToAction("Index", "Employee", employee);
+            }
+        }
+        [HttpGet]
+        [ActionName("Edit")]
+        public IActionResult Edit()
+        {
+            var token = Request.Cookies[Constants.XAsseccToken];
+            var user = GetTokenInfo(token);
+            return View(new EditModel() { email = user.email, userName = user.name });
+        }
+
+        [HttpPost]
+        [ActionName("EditAsync")]
+        public async Task<IActionResult> EditAsync(EditModel user)
+        {
+            try
+            {
+                await _userManagementService.EditAsync(user);
+                //await _userManagementService.LogoutAsync(new RevokeToken() { refreshToken = Request.Cookies[Constants.XRefreshToken] });
+                var newTokens = await _userManagementService.LoginAsync(new UserLogin() { email= user.email, password= user.password });
+                Response.Cookies.Append(Constants.XAsseccToken, newTokens.accessToken);
+                Response.Cookies.Append(Constants.XRefreshToken, newTokens.refreshToken);
+                return Redirect(GetTokenInfo(newTokens.accessToken));
+            }
+            catch (FlurlHttpException ex)
+            {
+                TempData["EditError"] = JsonConvert.SerializeObject(_localizer["EditError"]);
+                return RedirectToAction("Edit", "UserManagement");
             }
         }
         public UserInfo GetTokenInfo(string token)

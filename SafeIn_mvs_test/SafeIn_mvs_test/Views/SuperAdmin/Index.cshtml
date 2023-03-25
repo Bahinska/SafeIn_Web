@@ -14,6 +14,7 @@
         border: 1px solid silver;
     }
 </style>
+<a href="@Url.Action("Edit", "UserManagement")"><i style="font-size:24px" class="fa">&#xf013;</i></a>
 <div class="text-center">
     <h1 class="display-4">@localizer["AllAdmins"]</h1>
     <a class="btn btn-primary btn-sm" href="~/SuperAdmin/CreateAdmin">@localizer["NewAdmin"]</a>
@@ -34,14 +35,11 @@
                     <td>@us.email</td>
                     <td>@us.company</td>
                     <th>
-
-                        @Html.ActionLink("Edit", "EditAdminAsync", "SuperAdmin", new { email = us.email }, null)
-                        <a class="btn btn-danger delete"
+                       <a class="btn btn-danger delete"
                        data-email="@us.email"
                        data-controller="SuperAdmin"
                        data-action="DeleteAdminAsync"
                        data-body-message="@localizer["ConfirmMessage"] @us.name?">
-                            <i class="fas fa-trash alt"></i>
                             @localizer["Delete"]
                         </a>
                     </th>
