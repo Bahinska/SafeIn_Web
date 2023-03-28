@@ -10,24 +10,24 @@
     @using (Html.BeginForm("CreateAdminAsync", "SuperAdmin", FormMethod.Post))
     {
         <div class="form-outline form-white mb-4">
-            @Html.TextBoxFor(m => m.CompanyName, new { @class = "form-control", type = "userName", placeholder = @localizer["Company"].Value, required = "required"})
-            @Html.ValidationMessageFor(m => m.CompanyName, "", new { @class = "error" })
+            @Html.TextBoxFor(m => m.companyName, new { @class = "form-control", type = "userName", placeholder = @localizer["Company"].Value, required = "required"})
+            @Html.ValidationMessageFor(m => m.companyName, "", new { @class = "error" })
         </div>
         <div class="form-outline form-white mb-4">
-            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", type = "userName", placeholder = @localizer["UserName"].Value, required = "required"})
-            @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "error" })
+            @Html.TextBoxFor(m => m.userName, new { @class = "form-control", type = "userName", placeholder = @localizer["UserName"].Value, required = "required"})
+            @Html.ValidationMessageFor(m => m.userName, "", new { @class = "error" })
         </div>
         <div class="form-outline form-white mb-4">
-            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email", placeholder = @localizer["Email"].Value, required = "required"})
-            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "error" })
+            @Html.TextBoxFor(m => m.email, new { @class = "form-control", type = "email", placeholder = @localizer["Email"].Value, required = "required"})
+            @Html.ValidationMessageFor(m => m.email, "", new { @class = "error" })
         </div>
         <div class="form-outline form-white mb-4">
-            @Html.TextBoxFor(m => m.Password, new { @class = "form-control",type = "password", placeholder = @localizer["Password"].Value})
-            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "error" })
+            @Html.TextBoxFor(m => m.password, new { @class = "form-control",type = "password", placeholder = @localizer["Password"].Value})
+            @Html.ValidationMessageFor(m => m.password, "", new { @class = "error" })
         </div>
         <div class="form-outline form-white mb-4">
-            @Html.TextBoxFor(m => m.ConfirmPassword, new { @class = "form-control",type = "password", placeholder = @localizer["ConfirmPassword"].Value})
-            @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "error" })
+            @Html.TextBoxFor(m => m.confirmPassword, new { @class = "form-control",type = "password", placeholder = @localizer["ConfirmPassword"].Value})
+            @Html.ValidationMessageFor(m => m.confirmPassword, "", new { @class = "error" })
         </div>
         <div class="offset-sm-3 col-sm-3 d-grid">
             <button type="submit" class="btn btn-primary">@localizer["Submit"]</button>
