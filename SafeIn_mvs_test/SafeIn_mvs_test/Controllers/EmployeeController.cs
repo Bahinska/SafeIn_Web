@@ -11,6 +11,7 @@ using Segment.Model;
 using SafeIn_mvs_test.Models;
 using SafeIn_mvs_test.Repositories;
 using SafeIn_mvs_test.Services;
+using SafeIn_mvs_test.Helper;
 
 namespace SafeIn_mvs_test.Controllers
 {
@@ -22,9 +23,20 @@ namespace SafeIn_mvs_test.Controllers
         {
             _userManagementService = userManagementService;
         }
-        public IActionResult Index(EmployeeViewModel employee)
+        public IActionResult Index()
         {
+            var info = Helper.Helper.GetTokenInfo(HttpContext.Request.Cookies[Constants.XAsseccToken]);
+            EmployeeViewModel employee = new EmployeeViewModel
+            {
+                email = info.email,
+                name = info.userName,
+                company = info.company
+            };
             return View(employee);
+        }
+        public async Task<IActionResult> QrCode()
+        {
+            return View();
         }
         public async Task<IActionResult> GenerateQRCode()
         {
@@ -34,12 +46,21 @@ namespace SafeIn_mvs_test.Controllers
                 refreshToken = HttpContext.Request.Cookies[Constants.XRefreshToken]
             };
             var newTokens = await _userManagementService.RefreshTokensAsync(oldTokens);
+            RenewCookies(newTokens);
 
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
             QRCodeData qrCodeData = qrGenerator.CreateQrCode(newTokens.accessToken, QRCodeGenerator.ECCLevel.Q);
             PngByteQRCode qRCode = new PngByteQRCode(qrCodeData);
             byte[] qrCodeBytes = qRCode.GetGraphic(20);
             return File(qrCodeBytes, "image/png");   
+        }
+        public void RenewCookies(Tokens newTokens)
+        {
+            Response.Cookies.Delete(Constants.XAsseccToken);
+            Response.Cookies.Delete(Constants.XRefreshToken);
+
+            Response.Cookies.Append(Constants.XAsseccToken, newTokens.accessToken);
+            Response.Cookies.Append(Constants.XRefreshToken, newTokens.refreshToken);
         }
     }
 }

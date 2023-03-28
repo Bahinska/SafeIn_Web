@@ -71,7 +71,7 @@ namespace SafeIn_mvs_test.Controllers
                 Response.Cookies.Append(Constants.XAsseccToken, tokens.accessToken);
                 Response.Cookies.Append(Constants.XRefreshToken, tokens.refreshToken);
                 ViewBag.Authorized = true;
-                return Redirect(GetTokenInfo(tokens.accessToken));
+                return Redirect(Helper.Helper.GetTokenInfo(tokens.accessToken));
             }
             catch (FlurlHttpException ex)
             {
@@ -88,23 +88,14 @@ namespace SafeIn_mvs_test.Controllers
         {
             if (info.role == "SuperAdmin") return RedirectToAction("Index", "SuperAdmin");
             if (info.role == "Admin") return  RedirectToAction("Index", "Admin");
-            else
-            {
-                EmployeeViewModel employee = new EmployeeViewModel
-                {
-                    email = info.email,
-                    name = info.userName,
-                    company = info.company
-                };
-                return RedirectToAction("Index", "Employee", employee);
-            }
+            else return RedirectToAction("Index", "Employee");
         }
         [HttpGet]
         [ActionName("Edit")]
         public IActionResult Edit()
         {
             var token = Request.Cookies[Constants.XAsseccToken];
-            var user = GetTokenInfo(token);
+            var user = Helper.Helper.GetTokenInfo(token);
             return View(new EditModel() { email = user.email, userName = user.userName });
         }
 
@@ -115,36 +106,17 @@ namespace SafeIn_mvs_test.Controllers
             try
             {
                 await _userManagementService.EditAsync(user);
-                //await _userManagementService.LogoutAsync(new RevokeToken() { refreshToken = Request.Cookies[Constants.XRefreshToken] });
+                await _userManagementService.LogoutAsync(new RevokeToken() { refreshToken = Request.Cookies[Constants.XRefreshToken] });
                 var newTokens = await _userManagementService.LoginAsync(new UserLogin() { email= user.email, password= user.password });
                 Response.Cookies.Append(Constants.XAsseccToken, newTokens.accessToken);
                 Response.Cookies.Append(Constants.XRefreshToken, newTokens.refreshToken);
-                return Redirect(GetTokenInfo(newTokens.accessToken));
+                return Redirect(Helper.Helper.GetTokenInfo(newTokens.accessToken));
             }
             catch (FlurlHttpException ex)
             {
                 TempData["EditError"] = JsonConvert.SerializeObject(_localizer["EditError"]);
                 return RedirectToAction("Edit", "UserManagement");
             }
-        }
-        public UserInfo GetTokenInfo(string token)
-        {
-            var tokenInfo = new Dictionary<string, string>();
-            var handler = new JwtSecurityTokenHandler();
-            var tokenData = handler.ReadJwtToken(token);
-            var claims = tokenData.Claims.ToList();
-            foreach (var claim in claims)
-            {
-                tokenInfo.Add(claim.Type, claim.Value);
-            }
-            var info = new UserInfo()
-            {
-                email = tokenInfo["Email"],
-                userName = tokenInfo["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"],
-                role = tokenInfo["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"],
-                company = tokenInfo["Company"]
-            };
-            return info;
         }
     }
 }
