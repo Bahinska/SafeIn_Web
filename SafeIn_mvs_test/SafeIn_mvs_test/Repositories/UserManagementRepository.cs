@@ -37,5 +37,10 @@ namespace SafeIn_mvs_test.Repositories
         {
              await _flurlClient.Request("Auth/edit").PutJsonAsync(user);
         }
+
+        public async Task TokenValidate()
+        {
+            await _flurlClient.Request("Auth/tokenValidate").GetAsync();
+        }
     }
 }

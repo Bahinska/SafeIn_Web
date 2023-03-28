@@ -10,5 +10,6 @@ namespace SafeIn_mvs_test.Repositories
         Task<IFlurlResponse> GetTokenInfoAsync(string token);
         Task LogoutAsync(RevokeToken tokenToRevoke);
         Task EditAsync(EditModel user);
+        Task TokenValidate();
     }   
 }
