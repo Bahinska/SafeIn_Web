@@ -1,18 +1,6 @@
 ﻿@model SafeIn_mvs_test.ViewModels.EmployeeViewModel
 @inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 
-<div class="modal fade" id="dialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="myModalLabel">Qr</h4>
-            </div>
-            <div class="modal-body">
-                <img height="400" width="400" id="qr_image" src="@Url.Action("GenerateQRCode", "Employee")" alt="My Image">
-            </div>
-        </div>
-    </div>
-</div>
 <head>
     <script defer src="modal-popup.js"></script>
 </head>
@@ -21,7 +9,7 @@
     <h1>@localizer["Company"]: @Model.company</h1>
     <h3>@localizer["Employee"]: @Model.name</h3>
     <h5>@localizer["Email"]: @Model.email</h5>
-    <button class="btn btn-primary btn-lg px-5" id="open-dialog" data-bs-toggle="modal" data-bs-target="#dialog">@localizer["CreateQR"]</button>
+    <a class="btn btn-outline-primary" href="/Employee/QrCode" role="button">@localizer["CreateQR"]</a>
 
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
