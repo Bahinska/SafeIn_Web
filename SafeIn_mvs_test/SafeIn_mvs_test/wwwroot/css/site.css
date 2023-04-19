@@ -1,22 +1,128 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-variablefont_wght.ttf') format('truetype');
 }
 
 body {
-  margin-bottom: 60px;
+    font-family: Montserrat; 
+    margin: 0 !important;
+}
+button {
+    font-family: Montserrat;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+select:hover {
+    cursor: pointer;
+}
+
+
+/* Header */
+header {
+    margin-bottom: 30px;
+}
+
+.header_navbar {
+    height: 100px;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    padding: 0 45px 0 30px;
+    box-sizing: border-box;
+}
+
+.navbar_left, .navbar_right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar_right {
+    margin-left: auto;
+}
+
+.header_logo {
+    font-weight: 700;
+    font-size: 48px;
+    margin-right: 30px;
+}
+
+.navbar_logout {
+    font-weight: 400;
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+.navbar_left select {
+    border-radius: 25px;
+}
+.fa {
+    color: black;
+    transition: 0.1s;
+}
+
+.fa:hover {
+    color: #0038FF;
+}
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid black;
+    width: 100%;
+    background: #FFFFFF;
+}
+
+footer p {
+    font-weight: 400;
+    font-size: 24px;
+    margin-left: 35px;
+}
+
+@media (max-width: 900px) {
+    .header_navbar, footer {
+        height: 80px;
+    }
+}
+
+@media (max-width: 540px) {
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+    }
+    header {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }   
+    .header_navbar {
+        padding: 0 15px 0 15px;
+    }
+
+    footer p {
+        font-size: 20px;
+        margin: auto;
+    }
+    .header_logo {
+        font-size: 36px;
+        margin-right: 15px;
+    }
+    .navbar_logout {
+        font-size: 20px;
+        margin-right: 15px;
+    }
 }

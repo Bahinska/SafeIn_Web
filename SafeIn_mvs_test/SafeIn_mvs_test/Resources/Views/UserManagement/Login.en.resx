@@ -121,10 +121,10 @@
     <value>Email</value>
   </data>
   <data name="Enter log and pass" xml:space="preserve">
-    <value>Please enter your login and password!</value>
+    <value>Please enter your login and password</value>
   </data>
   <data name="Login" xml:space="preserve">
-    <value>Login</value>
+    <value>Log In</value>
   </data>
   <data name="LoginError" xml:space="preserve">
     <value>Invalid email or password! Try again.</value>

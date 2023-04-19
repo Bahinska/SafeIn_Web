@@ -4,37 +4,49 @@
     ViewData["Title"] = "CreateEmployee";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<br />
-<h2>@localizer["NewAdmin"]</h2>
-<div class="mb-md-5 mt-md-4 pb-5">
+
+<link rel="stylesheet" href="~/css/create_admin.css" asp-append-version="true" />
+
+
+<div class="new_admin_fields">
+    <div class="new_admin_title">
+        <h2>@localizer["NewAdmin"]</h2>
+    </div>
+
     @using (Html.BeginForm("CreateAdminAsync", "SuperAdmin", FormMethod.Post))
     {
-        <div class="form-outline form-white mb-4">
+        <div class="InputField">
             @Html.TextBoxFor(m => m.companyName, new { @class = "form-control", type = "userName", placeholder = @localizer["Company"].Value, required = "required"})
             @Html.ValidationMessageFor(m => m.companyName, "", new { @class = "error" })
         </div>
-        <div class="form-outline form-white mb-4">
+        <div class="InputField">
             @Html.TextBoxFor(m => m.userName, new { @class = "form-control", type = "userName", placeholder = @localizer["UserName"].Value, required = "required"})
             @Html.ValidationMessageFor(m => m.userName, "", new { @class = "error" })
         </div>
-        <div class="form-outline form-white mb-4">
+        <div class="InputField">
             @Html.TextBoxFor(m => m.email, new { @class = "form-control", type = "email", placeholder = @localizer["Email"].Value, required = "required"})
             @Html.ValidationMessageFor(m => m.email, "", new { @class = "error" })
         </div>
-        <div class="form-outline form-white mb-4">
+        <div class="InputField">
             @Html.TextBoxFor(m => m.password, new { @class = "form-control",type = "password", placeholder = @localizer["Password"].Value})
             @Html.ValidationMessageFor(m => m.password, "", new { @class = "error" })
         </div>
-        <div class="form-outline form-white mb-4">
+        <div class="InputField">
             @Html.TextBoxFor(m => m.confirmPassword, new { @class = "form-control",type = "password", placeholder = @localizer["ConfirmPassword"].Value})
             @Html.ValidationMessageFor(m => m.confirmPassword, "", new { @class = "error" })
         </div>
-        <div class="offset-sm-3 col-sm-3 d-grid">
-            <button type="submit" class="btn btn-primary">@localizer["Submit"]</button>
+
+
+        <div class="SubmitButton">
+            <button type="submit">@localizer["Submit"]</button>
         </div>
-        <div class="offset-sm-3 col-sm-3 d-grid">
-            <a class="btn btn-outline-primary" href="/SuperAdmin/Index" role="button">@localizer["Cancel"]</a>
-        </div>
+       
+        <a href="/SuperAdmin/Index" role="button">
+            <div class="CancelButton">
+                <p>@localizer["Cancel"]</p>
+            </div>
+        </a>
+
         @if (TempData["SuccessMessageAdminCreate"] != null)
         {
             <div class="alert alert-success">@localizer["SuccessMessageAdminCreate"]</div>

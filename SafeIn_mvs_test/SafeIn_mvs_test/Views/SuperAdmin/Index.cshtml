@@ -3,21 +3,19 @@
 }
 @inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 @model SafeIn_mvs_test.ViewModels.AllAdminsViewModel
-<style>
-    table {
-        border-collapse: collapse;
-        margin-left: auto;
-        margin-right: auto;
-    }
 
-    th, td {
-        border: 1px solid silver;
-    }
-</style>
-<a href="@Url.Action("Edit", "UserManagement")"><i style="font-size:24px" class="fa">&#xf013;</i></a>
-<div class="text-center">
-    <h1 class="display-4">@localizer["AllAdmins"]</h1>
-    <a class="btn btn-primary btn-sm" href="~/SuperAdmin/CreateAdmin">@localizer["NewAdmin"]</a>
+<link rel="stylesheet" href="~/css/super_admin_page.css" asp-append-version="true" />
+
+<div class="admin_list_body">
+
+    <div class="admin_title">
+        <h1>@localizer["AllAdmins"]</h1>
+    </div>
+    <a href="~/SuperAdmin/CreateAdmin" role="button">
+        <div class="new_admin_button">
+            <p>@localizer["NewAdmin"]</p>
+        </div>
+    </a>
     <table>
         <thead>
             <tr>

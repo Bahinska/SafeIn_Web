@@ -132,6 +132,9 @@
   <data name="NewPassword" xml:space="preserve">
     <value>Новий пароль</value>
   </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Налаштування</value>
+  </data>
   <data name="Submit" xml:space="preserve">
     <value>Редагувати</value>
   </data>
@@ -139,6 +142,6 @@
     <value>Дані успішно оновлені!</value>
   </data>
   <data name="UserName" xml:space="preserve">
-    <value>ім'я</value>
+    <value>Iм'я</value>
   </data>
 </root>

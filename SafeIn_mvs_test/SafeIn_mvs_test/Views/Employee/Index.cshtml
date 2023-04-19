@@ -4,12 +4,22 @@
 <head>
     <script defer src="modal-popup.js"></script>
 </head>
-<a href="@Url.Action("Edit", "UserManagement")"><i style="font-size:24px" class="fa">&#xf013;</i></a>
-<div class="center">
-    <h1>@localizer["Company"]: @Model.company</h1>
-    <h3>@localizer["Employee"]: @Model.name</h3>
-    <h5>@localizer["Email"]: @Model.email</h5>
-    <a class="btn btn-outline-primary" href="/Employee/QrCode" role="button">@localizer["CreateQR"]</a>
+
+<link rel="stylesheet" href="~/css/employee_page.css" asp-append-version="true" />
+
+<div class="employee_information">
+    <h1 class="employee_company">@localizer["Company"]: @Model.company</h1>
+    <h3 class="employee_name">@localizer["Employee"]: @Model.name</h3>
+    <h3 class="employee_email">@localizer["Email"]: @Model.email</h3>
+    
+    <a href="/Employee/QrCode" role="button">
+        <div class="create_qr_code">
+            <p>@localizer["CreateQR"]</p>
+        </div>
+    </a>
+
+    @*<a class="create_qr_code" href="/Employee/QrCode" role="button">@localizer["CreateQR"]</a>
+    <button class="create_qr_code" href="/Employee/QrCode">@localizer["CreateQR"]</button>*@
 
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
@@ -19,8 +29,3 @@
         $('#dialog').modal('hide'); 
   }, 5000); 
 </script>
-<style>
-    .center {
-        text-align: center;
-    }
-</style>

@@ -120,6 +120,9 @@
   <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
   <data name="CreateEmployeeError" xml:space="preserve">
     <value>Error while attept to create employee. Try again.</value>
   </data>

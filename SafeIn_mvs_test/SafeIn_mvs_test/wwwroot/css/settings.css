@@ -1,0 +1,101 @@
+.SettingsTitle {
+    margin-bottom: 70px;
+}
+
+.SettingsTitle h2 {
+    text-align: center;
+    font-size: 62px;
+    font-weight: 700;
+}
+
+.InputField {
+    width: 500px;
+    margin: auto;
+    margin-bottom: 35px;
+}
+
+.InputField input {
+    width: 100%;
+    height: 45px;
+    border-radius: 25px;
+    padding-left: 25px;
+    font-size: 18px;
+    border: 1px solid #9B9999;
+    box-sizing: border-box;
+}
+
+.SubmitButton {
+    margin: auto;
+    height: 85px;
+    width: 500px;
+    margin-bottom: 120px;
+}
+
+.SubmitButton button {
+    background: linear-gradient(180deg, #00FF47 -120.55%, rgba(217, 217, 217, 0.69) 92.19%);
+    font-size: 28px;
+    border-radius: 25px;
+    font-weight: 700;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.icon {
+    position: absolute;
+    top: 105px;
+    left: 40px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.arrow {
+    position: absolute;
+    width: 90%;
+    height: 8px;
+    background-color: #000;
+}
+
+.arrow::after, .arrow::before {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 8px;
+    background-color: #000;
+    left: -8px;
+}
+
+.arrow::after {
+    top: -9px;
+    transform: rotate(-45deg);
+}
+
+.arrow::before {
+    top: 9px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    transform: rotate(45deg);
+}
+
+
+
+@media (max-width: 900px) {
+    .SettingsTitle{
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 540px) {
+   
+    .SettingsTitle h2 {
+        font-size: 42px;
+    }
+    .SubmitButton {
+        margin-bottom: 0;
+        width: 90vw;
+    }
+    .InputField{
+        width: 90vw;
+    }
+
+}

@@ -121,7 +121,7 @@
     <value>Company</value>
   </data>
   <data name="CreateQR" xml:space="preserve">
-    <value>Create QR</value>
+    <value>Create QR Code</value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
