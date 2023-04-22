@@ -5,29 +5,37 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<link rel="stylesheet" href="~/css/create_employee.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/create_user.css" asp-append-version="true" />
 
 
 <div class="new_employee_fields">
     <div class="new_employee_title">
         <h2>@localizer["NewEmployee"]</h2>
+        @if (TempData["SuccessMessageEmployeeCreate"] != null)
+        {
+            <div class="create_success">@localizer["SuccessMessageEmployeeCreate"]</div>
+        }
+        @if (TempData["CreateEmployeeError"] != null)
+        {
+            <div class="create_error">@localizer["CreateEmployeeError"]</div>
+        }
     </div>
     @using (Html.BeginForm("CreateEmployeeAsync", "Admin", FormMethod.Post))
     {
         <div class="InputField">
-            @Html.TextBoxFor(m => m.userName, new {type = "userName", placeholder = @localizer["UserName"].Value, required = "required"})
+            @Html.TextBoxFor(m => m.userName, new {@class = "form-control", type = "userName", placeholder = @localizer["UserName"].Value, required = "required"})
             @Html.ValidationMessageFor(m => m.userName, "", new { @class = "error" })
         </div>
         <div class="InputField">
-            @Html.TextBoxFor(m => m.email, new {type = "email", placeholder = @localizer["Email"].Value, required = "required"})
+            @Html.TextBoxFor(m => m.email, new {@class = "form-control", type = "email", placeholder = @localizer["Email"].Value, required = "required"})
             @Html.ValidationMessageFor(m => m.email, "", new { @class = "error" })
         </div>
         <div class="InputField">
-            @Html.TextBoxFor(m => m.password, new {type = "password", placeholder = @localizer["Password"].Value})
+            @Html.TextBoxFor(m => m.password, new {@class = "form-control", type = "password", placeholder = @localizer["Password"].Value})
             @Html.ValidationMessageFor(m => m.password, "", new { @class = "error" })
         </div>
         <div class="InputField">
-            @Html.TextBoxFor(m => m.confirmPassword, new {type = "password", placeholder = @localizer["ConfirmPassword"].Value})
+            @Html.TextBoxFor(m => m.confirmPassword, new {@class = "form-control", type = "password", placeholder = @localizer["ConfirmPassword"].Value})
             @Html.ValidationMessageFor(m => m.confirmPassword, "", new { @class = "error" })
         </div>
 
@@ -42,14 +50,7 @@
         </a>
         
 
-        @if (TempData["SuccessMessageEmployeeCreate"] != null)
-        {
-            <div class="alert alert-success">@localizer["SuccessMessageEmployeeCreate"]</div>
-        }
-        if (TempData["CreateEmployeeError"] != null)
-        {
-            <div class="alert alert-danger">@localizer["CreateEmployeeError"]</div>
-        }
+        
 
     }
 </div>

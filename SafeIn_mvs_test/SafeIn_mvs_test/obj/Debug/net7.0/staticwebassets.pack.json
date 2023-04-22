@@ -13,12 +13,8 @@
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\Study\\c#\\SafeIn\\SafeIn_Web\\SafeIn_mvs_test\\SafeIn_mvs_test\\wwwroot\\css\\create_admin.css",
-      "PackagePath": "staticwebassets\\css\\create_admin.css"
-    },
-    {
-      "Id": "D:\\Study\\c#\\SafeIn\\SafeIn_Web\\SafeIn_mvs_test\\SafeIn_mvs_test\\wwwroot\\css\\create_employee.css",
-      "PackagePath": "staticwebassets\\css\\create_employee.css"
+      "Id": "D:\\Study\\c#\\SafeIn\\SafeIn_Web\\SafeIn_mvs_test\\SafeIn_mvs_test\\wwwroot\\css\\create_user.css",
+      "PackagePath": "staticwebassets\\css\\create_user.css"
     },
     {
       "Id": "D:\\Study\\c#\\SafeIn\\SafeIn_Web\\SafeIn_mvs_test\\SafeIn_mvs_test\\wwwroot\\css\\employee_page.css",
@@ -39,10 +35,6 @@
     {
       "Id": "D:\\Study\\c#\\SafeIn\\SafeIn_Web\\SafeIn_mvs_test\\SafeIn_mvs_test\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
-    },
-    {
-      "Id": "D:\\Study\\c#\\SafeIn\\SafeIn_Web\\SafeIn_mvs_test\\SafeIn_mvs_test\\wwwroot\\css\\super_admin_page.css",
-      "PackagePath": "staticwebassets\\css\\super_admin_page.css"
     },
     {
       "Id": "D:\\Study\\c#\\SafeIn\\SafeIn_Web\\SafeIn_mvs_test\\SafeIn_mvs_test\\wwwroot\\favicon.ico",

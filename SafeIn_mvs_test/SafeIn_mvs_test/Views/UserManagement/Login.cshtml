@@ -9,12 +9,11 @@
 
 <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
 
-
 <section class="LoginPage">
     <div class="language">
         <partial name="_Culture"/>
     </div>
-    <div class="LoginBody">
+    <div class="LoginBody animate__animated animate__zoomIn">
         @using (Html.BeginForm("LoginPostAsync", "UserManagement", FormMethod.Post))
         {
 
@@ -34,14 +33,16 @@
                 @Html.TextBoxFor(m => m.Password, new { type = "password", required = "required"})
             </div>
 
+            if (TempData["errorLoginMessage"] != null)
+            {
+                <div class="login_error">@localizer["LoginError"]</div>
+            }
+
             <div class="LoginButton">
                 <button type="submit">@localizer["Login"]</button>
             </div>
             
-            if (TempData["errorLoginMessage"] != null)
-            {
-                <div>@localizer["LoginError"]</div>
-            }
+            
 @*                              
             <div class="d-flex justify-content-center text-center mt-4 pt-1">
                 <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>

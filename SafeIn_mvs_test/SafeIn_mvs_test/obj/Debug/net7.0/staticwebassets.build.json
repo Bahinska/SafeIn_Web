@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HsC7cgugKWp9V9IizkPwXRgzBzcrmRWXDGgKzW7Gp0g=",
+  "Hash": "ze1vf3HrUajr3LFSVL7cydlEv5ZdjwhboZIxrgwMfTA=",
   "Source": "SafeIn_mvs_test",
   "BasePath": "_content/SafeIn_mvs_test",
   "Mode": "Default",
@@ -85,12 +85,12 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\Study\\c#\\SafeIn\\SafeIn_Web\\SafeIn_mvs_test\\SafeIn_mvs_test\\wwwroot\\css\\create_admin.css",
+      "Identity": "D:\\Study\\c#\\SafeIn\\SafeIn_Web\\SafeIn_mvs_test\\SafeIn_mvs_test\\wwwroot\\css\\create_user.css",
       "SourceId": "SafeIn_mvs_test",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Study\\c#\\SafeIn\\SafeIn_Web\\SafeIn_mvs_test\\SafeIn_mvs_test\\wwwroot\\",
       "BasePath": "_content/SafeIn_mvs_test",
-      "RelativePath": "css/create_admin.css",
+      "RelativePath": "css/create_user.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,24 +99,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\create_admin.css"
-    },
-    {
-      "Identity": "D:\\Study\\c#\\SafeIn\\SafeIn_Web\\SafeIn_mvs_test\\SafeIn_mvs_test\\wwwroot\\css\\create_employee.css",
-      "SourceId": "SafeIn_mvs_test",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\c#\\SafeIn\\SafeIn_Web\\SafeIn_mvs_test\\SafeIn_mvs_test\\wwwroot\\",
-      "BasePath": "_content/SafeIn_mvs_test",
-      "RelativePath": "css/create_employee.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\create_employee.css"
+      "OriginalItemSpec": "wwwroot\\css\\create_user.css"
     },
     {
       "Identity": "D:\\Study\\c#\\SafeIn\\SafeIn_Web\\SafeIn_mvs_test\\SafeIn_mvs_test\\wwwroot\\css\\employee_page.css",
@@ -202,23 +185,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
-    },
-    {
-      "Identity": "D:\\Study\\c#\\SafeIn\\SafeIn_Web\\SafeIn_mvs_test\\SafeIn_mvs_test\\wwwroot\\css\\super_admin_page.css",
-      "SourceId": "SafeIn_mvs_test",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Study\\c#\\SafeIn\\SafeIn_Web\\SafeIn_mvs_test\\SafeIn_mvs_test\\wwwroot\\",
-      "BasePath": "_content/SafeIn_mvs_test",
-      "RelativePath": "css/super_admin_page.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\super_admin_page.css"
     },
     {
       "Identity": "D:\\Study\\c#\\SafeIn\\SafeIn_Web\\SafeIn_mvs_test\\SafeIn_mvs_test\\wwwroot\\favicon.ico",

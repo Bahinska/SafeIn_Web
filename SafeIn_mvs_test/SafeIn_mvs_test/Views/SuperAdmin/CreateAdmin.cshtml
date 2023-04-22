@@ -5,12 +5,20 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<link rel="stylesheet" href="~/css/create_admin.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/create_user.css" asp-append-version="true" />
 
 
 <div class="new_admin_fields">
     <div class="new_admin_title">
         <h2>@localizer["NewAdmin"]</h2>
+        @if (TempData["SuccessMessageAdminCreate"] != null)
+        {
+            <div class="create_success">@localizer["SuccessMessageAdminCreate"]</div>
+        }
+        @if (TempData["CreateAdminError"] != null)
+        {
+            <div class="create_error">@localizer["CreateAdminError"]</div>
+        }
     </div>
 
     @using (Html.BeginForm("CreateAdminAsync", "SuperAdmin", FormMethod.Post))
@@ -46,15 +54,5 @@
                 <p>@localizer["Cancel"]</p>
             </div>
         </a>
-
-        @if (TempData["SuccessMessageAdminCreate"] != null)
-        {
-            <div class="alert alert-success">@localizer["SuccessMessageAdminCreate"]</div>
-        }
-        if (TempData["CreateAdminError"] != null)
-        {
-            <div class="alert alert-danger">@localizer["CreateAdminError"]</div>
-        }
-
     }
 </div>

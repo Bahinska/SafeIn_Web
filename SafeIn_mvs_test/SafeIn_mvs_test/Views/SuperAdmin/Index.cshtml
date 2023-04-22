@@ -4,18 +4,21 @@
 @inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 @model SafeIn_mvs_test.ViewModels.AllAdminsViewModel
 
-<link rel="stylesheet" href="~/css/super_admin_page.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/admin_page.css" asp-append-version="true" />
 
 <div class="admin_list_body">
 
     <div class="admin_title">
         <h1>@localizer["AllAdmins"]</h1>
     </div>
-    <a href="~/SuperAdmin/CreateAdmin" role="button">
-        <div class="new_admin_button">
-            <p>@localizer["NewAdmin"]</p>
-        </div>
-    </a>
+    <div class="new_admin">
+        <a href="~/SuperAdmin/CreateAdmin" role="button">
+            <div class="new_admin_button">
+                <p>@localizer["NewAdmin"]</p>
+            </div>
+        </a>
+    </div>
+
     <table>
         <thead>
             <tr>

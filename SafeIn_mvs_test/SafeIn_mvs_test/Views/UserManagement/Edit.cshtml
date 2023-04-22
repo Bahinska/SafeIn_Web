@@ -8,46 +8,35 @@
 
 <link rel="stylesheet" href="~/css/settings.css" asp-append-version="true" />
 
-@*<div class="icon">
-  <div class="arrow"></div>
-</div>*@
 <div class="SettingsBody">
     <div class="SettingsTitle">
         <h2>@localizer["Settings"]</h2>
+        @if (TempData["EditError"] != null)
+        {
+            <div class="edit_error">@localizer["EditError"]</div>
+        }
     </div>
     @using (Html.BeginForm("EditAsync", "UserManagement", FormMethod.Post))
     {
         <div class="InputField">
            
-            @Html.TextBoxFor(m => m.userName, new {@Value = Model.userName, type = "userName", placeholder = @localizer["UserName"].Value, required = "required"})
+            @Html.TextBoxFor(m => m.userName, new {@class = "form-control", @Value = Model.userName, type = "userName", placeholder = @localizer["UserName"].Value, required = "required"})
             @Html.ValidationMessageFor(m => m.userName, "", new { @class = "error" })
         </div>
         <div class="InputField">
-            @Html.TextBoxFor(m => m.email, new {@Value = Model.email, type = "email", placeholder = @localizer["Email"].Value, required = "required"})
+            @Html.TextBoxFor(m => m.email, new {@class = "form-control", @Value = Model.email, type = "email", placeholder = @localizer["Email"].Value, required = "required"})
             @Html.ValidationMessageFor(m => m.email, "", new { @class = "error" })
         </div>
         <div class="InputField">
-            @Html.TextBoxFor(m => m.currentPassword, new {type = "password", placeholder = @localizer["CurrentPassword"].Value})
+            @Html.TextBoxFor(m => m.currentPassword, new {@class = "form-control", type = "password", placeholder = @localizer["CurrentPassword"].Value})
             @Html.ValidationMessageFor(m => m.currentPassword, "", new { @class = "error" })
         </div>
         <div class="InputField">
-            @Html.TextBoxFor(m => m.password, new {type = "password", placeholder = @localizer["NewPassword"].Value})
+            @Html.TextBoxFor(m => m.password, new {@class = "form-control", type = "password", placeholder = @localizer["NewPassword"].Value})
             @Html.ValidationMessageFor(m => m.password, "", new { @class = "error" })
         </div>
         <div class="SubmitButton">
             <button type="submit">@localizer["Submit"]</button>
         </div>
-@*        <div class="offset-sm-3 col-sm-3 d-grid">
-            <a class="btn btn-outline-primary" href="@HttpContextAccessor.HttpContext.Request.Headers["Referer"]" role="button">@localizer["Cancel"]</a>
-        </div>*@
-        @if (TempData["SuccessEditMessage"] != null)
-        {
-            <div class="alert alert-success">@localizer["SuccessEditMessage"]</div>
-        }
-        if (TempData["EditError"] != null)
-        {
-            <div class="alert alert-danger">@localizer["EditError"]</div>
-        }
-
     }
 </div>

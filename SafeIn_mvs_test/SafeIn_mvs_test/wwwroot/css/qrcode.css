@@ -7,7 +7,6 @@
 .qr_code_image {
     display: flex;
     justify-content: center;
-    margin-bottom: 120px;
 }
 
 .qr_code_image img {
@@ -27,9 +26,6 @@
 
 @media (max-width: 540px) {
     
-    .qr_code_image {
-        margin: 0;
-    }
     .qr_code_image img {
         width: 360px;
         height: 360px;

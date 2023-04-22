@@ -12,15 +12,13 @@
     <h3 class="employee_name">@localizer["Employee"]: @Model.name</h3>
     <h3 class="employee_email">@localizer["Email"]: @Model.email</h3>
     
-    <a href="/Employee/QrCode" role="button">
-        <div class="create_qr_code">
-            <p>@localizer["CreateQR"]</p>
-        </div>
-    </a>
-
-    @*<a class="create_qr_code" href="/Employee/QrCode" role="button">@localizer["CreateQR"]</a>
-    <button class="create_qr_code" href="/Employee/QrCode">@localizer["CreateQR"]</button>*@
-
+    <div class="create_qr_code">
+        <a href="/Employee/QrCode" role="button">
+            <div class="create_qr_code_button">
+                <p>@localizer["CreateQR"]</p>
+            </div>
+        </a>
+    </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
 

@@ -4,8 +4,10 @@
 }
 
 body {
-    font-family: Montserrat; 
+    font-family: Montserrat;
     margin: 0 !important;
+    display: grid;
+    height: 100vh;
 }
 button {
     font-family: Montserrat;
@@ -23,6 +25,9 @@ select:hover {
     cursor: pointer;
 }
 
+main {
+    margin: auto;
+}
 
 /* Header */
 header {
@@ -36,7 +41,7 @@ header {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: flex;
     align-items: center;
-    padding: 0 45px 0 30px;
+    padding: 0 30px 0 30px;
     box-sizing: border-box;
 }
 
@@ -74,14 +79,14 @@ header {
 }
 /* Footer */
 footer {
-    position: fixed;
-    bottom: 0;
+    align-self: end;
     height: 100px;
     display: flex;
     align-items: center;
     border-top: 1px solid black;
     width: 100%;
     background: #FFFFFF;
+    margin-top:30px;
 }
 
 footer p {
@@ -97,18 +102,7 @@ footer p {
 }
 
 @media (max-width: 540px) {
-    main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
 
-    }
-    header {
-        position: absolute;
-        top: 0;
-        width: 100%;
-    }   
     .header_navbar {
         padding: 0 15px 0 15px;
     }
