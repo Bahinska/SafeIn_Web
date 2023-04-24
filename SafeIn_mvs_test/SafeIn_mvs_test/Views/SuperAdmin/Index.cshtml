@@ -18,35 +18,36 @@
             </div>
         </a>
     </div>
-
-    <table>
-        <thead>
-            <tr>
-                <th>@localizer["UserName"]</th>
-                <th>@localizer["Email"]</th>
-                <th>@localizer["Company"]</th>
-                <th>@localizer["Action"]</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var us in Model.Admins)
-            {
+    <div class="users_table">
+        <table>
+            <thead>
                 <tr>
-                    <td>@us.userName</td>
-                    <td>@us.email</td>
-                    <td>@us.company</td>
-                    <th>
-                       <a class="btn btn-danger delete"
-                       data-email="@us.email"
-                       data-controller="SuperAdmin"
-                       data-action="DeleteAdminAsync"
-                       data-body-message="@localizer["ConfirmMessage"] @us.userName?">
-                            @localizer["Delete"]
-                        </a>
-                    </th>
+                    <th>@localizer["UserName"]</th>
+                    <th>@localizer["Email"]</th>
+                    <th>@localizer["Company"]</th>
+                    <th>@localizer["Action"]</th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var us in Model.Admins)
+                {
+                    <tr>
+                        <td>@us.userName</td>
+                        <td>@us.email</td>
+                        <td>@us.company</td>
+                        <th>
+                           <a class="btn btn-danger delete"
+                           data-email="@us.email"
+                           data-controller="SuperAdmin"
+                           data-action="DeleteAdminAsync"
+                           data-body-message="@localizer["ConfirmMessage"] @us.userName?">
+                                @localizer["Delete"]
+                            </a>
+                        </th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </div>
 

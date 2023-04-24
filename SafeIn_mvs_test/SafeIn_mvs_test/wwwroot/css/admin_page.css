@@ -1,20 +1,16 @@
-table {
-    border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
-    word-break: break-all;
+.users_table {
+    overflow-x: auto;
+    white-space: nowrap;
+    width:90vw;
 }
-
+table {
+    margin:auto;
+}
 
 th, td {
     border: 1px solid silver;
     text-align: center;
-
-}
-
-th, td {
-    width: 200px;
-    height: 50px;
+    padding:15px 30px;
 }
 
 .admin_title, .employee_title {
@@ -43,7 +39,7 @@ th, td {
     transition: 0.15s;
 }
 
-.new_employee_button:hover {
+.new_employee_button:hover, .new_admin_button:hover {
     opacity: 0.9;
 }
 
@@ -54,14 +50,12 @@ th, td {
     color: black;
 }
 
-main {
-    height: 100%;
-}
 
-@media(max-width:900px) {
 
-    table {
-        margin: 0 10px 0 10px;
+@media(max-width:800px) {
+
+    th, td {
+        padding: 10px;
     }
 
 }
