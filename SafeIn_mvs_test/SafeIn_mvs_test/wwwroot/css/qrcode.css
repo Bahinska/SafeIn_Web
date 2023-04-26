@@ -1,0 +1,33 @@
+.qr_code_title h4 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 62px;
+}
+
+.qr_code_image {
+    display: flex;
+    justify-content: center;
+}
+
+.qr_code_image img {
+    width: 600px;
+    height: 600px;
+}
+
+@media (max-width: 900px) {
+    .qr_code_title h4 {
+        font-size: 52px;
+    }
+    .qr_code_image img {
+        width: 520px;
+        height: 520px;
+    }
+}
+
+@media (max-width: 540px) {
+    
+    .qr_code_image img {
+        width: 360px;
+        height: 360px;
+    }
+}

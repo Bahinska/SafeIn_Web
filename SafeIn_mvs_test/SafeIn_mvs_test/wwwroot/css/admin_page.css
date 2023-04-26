@@ -1,0 +1,61 @@
+.users_table {
+    overflow-x: auto;
+    white-space: nowrap;
+    width:90vw;
+}
+table {
+    margin:auto;
+}
+
+th, td {
+    border: 1px solid silver;
+    text-align: center;
+    padding:15px 30px;
+}
+
+.admin_title, .employee_title {
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.admin_title h1, .employee_title h1 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 36px;
+}
+.new_admin, .new_employee{
+    width:300px;
+    margin:auto;
+}
+
+.new_admin_button, .new_employee_button {
+    height: 70px;
+    background: linear-gradient(203.5deg, #0038FF -74.55%, rgba(217, 217, 217, 0.69) 92.19%);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    transition: 0.15s;
+}
+
+.new_employee_button:hover, .new_admin_button:hover {
+    opacity: 0.9;
+}
+
+.new_admin_button p, .new_employee_button p {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: black;
+}
+
+
+
+@media(max-width:800px) {
+
+    th, td {
+        padding: 10px;
+    }
+
+}

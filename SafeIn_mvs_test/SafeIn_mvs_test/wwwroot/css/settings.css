@@ -1,0 +1,75 @@
+.SettingsTitle {
+    margin-bottom: 70px;
+}
+
+.SettingsTitle h2 {
+    text-align: center;
+    font-size: 62px;
+    font-weight: 700;
+}
+
+.InputField {
+    width: 500px;
+    margin-bottom: 35px;
+    transition: 0.15s;
+}
+
+.InputField input {
+    width: 100%;
+    height: 45px;
+    border-radius: 25px;
+    padding-left: 25px;
+    font-size: 18px;
+    border: 1px solid #9B9999;
+    box-sizing: border-box;
+}
+
+.SubmitButton {
+    height: 85px;
+    width: 500px;
+    transition: 0.15s;
+}
+
+.SubmitButton button {
+    background: linear-gradient(180deg, #00FF47 -120.55%, rgba(217, 217, 217, 0.69) 92.19%);
+    font-size: 28px;
+    border-radius: 25px;
+    font-weight: 700;
+    border: none;
+    width: 100%;
+    height: 100%;
+    transition: 0.15s;
+}
+
+.SubmitButton button:hover {
+    opacity: 0.9;
+}
+
+.edit_error {
+    margin: auto;
+    text-align: center;
+    font-size: 24px;
+    color: red;
+}
+
+
+
+@media (max-width: 900px) {
+    .SettingsTitle{
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 540px) {
+   
+    .SettingsTitle h2 {
+        font-size: 42px;
+    }
+    .SubmitButton {
+        width: 90vw;
+    }
+    .InputField{
+        width: 90vw;
+    }
+
+}

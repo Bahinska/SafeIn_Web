@@ -121,7 +121,7 @@
     <value>Компанія</value>
   </data>
   <data name="CreateQR" xml:space="preserve">
-    <value>Згенерувати QR</value>
+    <value>Згенерувати QR код</value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Електронна пошта</value>

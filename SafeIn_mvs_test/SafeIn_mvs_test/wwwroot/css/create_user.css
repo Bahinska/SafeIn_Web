@@ -1,0 +1,93 @@
+.new_admin_title, .new_employee_title {
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.new_admin_title h2, .new_employee_title h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 62px;
+}
+
+.InputField {
+    width: 500px;
+    margin: auto;
+    margin-bottom: 35px;
+    transition: 0.15s;
+}
+
+.InputField input {
+    width: 100%;
+    height: 45px;
+    border-radius: 25px;
+    padding-left: 25px;
+    font-size: 18px;
+    border: 1px solid #9B9999;
+    box-sizing: border-box;
+    
+}
+
+.SubmitButton, .CancelButton {
+    margin: auto;
+    height: 85px;
+    width: 500px;
+    transition: 0.15s;
+}
+
+.SubmitButton:hover, .CancelButton:hover{
+    opacity:0.9;
+}
+
+.CancelButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(203.5deg, #FF0000 -74.55%, rgba(217, 217, 217, 0.69) 92.19%, rgba(217, 217, 217, 0.69) 92.2%);
+    border-radius: 25px;
+    border: none;
+}
+
+.CancelButton p {
+    font-size: 28px;
+    font-weight: 700;
+    color:black;
+}
+
+.SubmitButton {
+    margin-bottom: 20px;
+}
+
+.SubmitButton button {
+    background: linear-gradient(180deg, #00FF47 -120.55%, rgba(217, 217, 217, 0.69) 92.19%);
+    font-size: 28px;
+    border-radius: 25px;
+    font-weight: 700;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.create_error, .create_success {
+    text-align: center;
+    font-size: 24px;
+}
+.create_error {
+    color: red;
+}
+.create_success {
+    color: green;
+}
+
+@media (max-width: 540px) {
+    .new_admin_title h2, .new_employee_title h2 {
+        font-size: 42px;
+    }
+
+    .SubmitButton, .CancelButton {
+        width: 90vw;
+    }
+
+    .InputField {
+        width: 90vw;
+    }
+}

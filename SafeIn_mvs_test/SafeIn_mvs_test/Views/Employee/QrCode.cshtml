@@ -1,19 +1,18 @@
-﻿<div class="center">
-    <div>
-        <h4>Qr </h4>
+﻿<link rel="stylesheet" href="~/css/qrcode.css" asp-append-version="true" />
+
+
+<div class="qr_code_body">
+    <div class="qr_code_title">
+        <h4>Qr Code</h4>
     </div>
-    <div>
-        <img height="400" width="400" id="qr_image" src="@Url.Action("GenerateQRCode", "Employee")" alt="My Image">
+
+    <div class="qr_code_image">
+        <img id="qr_image" src="@Url.Action("GenerateQRCode", "Employee")" alt="QR Code">
     </div>
 </div>
 
 <script>
     setTimeout(function() {
         window.location.href = '/Employee/Index';
-    }, 10000); 
+    }, 1000000); 
 </script>
-<style>
-    .center {
-        text-align: center;
-    }
-</style>

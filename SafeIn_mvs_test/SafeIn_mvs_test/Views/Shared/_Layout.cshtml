@@ -9,43 +9,38 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SafeIn_mvs_test.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="" asp-action="">SafeIn</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark",  asp-area="" asp-controller="UserManagement" asp-action="Logout">@localizer["Logout"]</a>
-                        </li>
-@*                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>*@
-                        <li class="nav-link">
-                            <partial name="_Culture" />
-                        </li>
-                    </ul>
-                </div>
+        <div class="header_navbar">
+            <div class="navbar_left">
+                <a class="header_logo" asp-area="" asp-controller="" asp-action="">SafeIn</a>
+                <partial name="_Culture" />
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - SafeIn - <a asp-area="" asp-controller="" asp-action="">Privacy</a>
+            @*<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>*@
+            <div class="navbar_right">    
+                <a class="navbar_logout",  asp-area="" asp-controller="UserManagement" asp-action="Logout">@localizer["Logout"]</a>
+                <a href="@Url.Action("Edit", "UserManagement")"><i style="font-size:24px" class="fa">&#xf013;</i></a>
+            </div>
         </div>
+    </header>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+
+    <footer>
+        <p>
+            &copy; Copyright 2023 - <b>SafeIn</b>
+        </p>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

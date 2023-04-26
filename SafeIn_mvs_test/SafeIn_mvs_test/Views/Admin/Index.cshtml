@@ -3,22 +3,23 @@
 }
 @inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 @model SafeIn_mvs_test.ViewModels.AllEmployeeViewModel
-<style>
-    table {
-        border-collapse: collapse;
-        margin-left: auto;
-        margin-right: auto;
-    }
 
-    th, td {
-        border: 1px solid silver;
-    }
-</style>
-<a href="@Url.Action("Edit", "UserManagement")"><i style="font-size:24px" class="fa">&#xf013;</i></a>
-<div class="text-center">
-    <h1 class="display-4">@localizer["AllEmployees"]</h1>
-    <a class="btn btn-primary btn-sm" href="~/Admin/CreateEmployee">@localizer["NewEmployee"]</a>
-    <table>
+<link rel="stylesheet" href="~/css/admin_page.css" asp-append-version="true" />
+
+<div class="employee_list_body">
+    <div class="employee_title">
+        <h1>@localizer["AllEmployees"]</h1>
+    </div>
+    <div class="new_employee">
+        <a href="~/Admin/CreateEmployee" role="button">
+        <div class="new_employee_button">
+            <p>@localizer["NewEmployee"]</p>
+        </div>
+    </a>
+    </div>
+
+    <div class="users_table">
+        <table>
         <thead>
         <tr>
                 <th>@localizer["UserName"]</th>
@@ -45,5 +46,6 @@
             }
         </tbody>
     </table>
+    </div>
 </div>
 
