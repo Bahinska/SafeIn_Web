@@ -9,65 +9,65 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SafeIn_mvs_test
 build_property.RootNamespace = SafeIn_mvs_test
-build_property.ProjectDir = D:\Study\c#\SafeIn\SafeIn_Web\SafeIn_mvs_test\SafeIn_mvs_test\
+build_property.ProjectDir = D:\GITHUB\web2.0\SafeIn_Web\SafeIn_mvs_test\SafeIn_mvs_test\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Study\c#\SafeIn\SafeIn_Web\SafeIn_mvs_test\SafeIn_mvs_test
+build_property.MSBuildProjectDirectory = D:\GITHUB\web2.0\SafeIn_Web\SafeIn_mvs_test\SafeIn_mvs_test
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Study/c\#/SafeIn/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/Admin/CreateEmployee.cshtml]
+[D:/GITHUB/web2.0/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/Admin/CreateEmployee.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlRW1wbG95ZWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/c\#/SafeIn/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/Admin/Index.cshtml]
+[D:/GITHUB/web2.0/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/c\#/SafeIn/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/Employee/Index.cshtml]
+[D:/GITHUB/web2.0/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/Employee/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/c\#/SafeIn/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/Employee/QrCode.cshtml]
+[D:/GITHUB/web2.0/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/Employee/QrCode.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcUXJDb2RlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/c\#/SafeIn/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/Shared/Error.cshtml]
+[D:/GITHUB/web2.0/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/c\#/SafeIn/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/Shared/_Culture.cshtml]
+[D:/GITHUB/web2.0/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/Shared/_Culture.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DdWx0dXJlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/c\#/SafeIn/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/GITHUB/web2.0/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/c\#/SafeIn/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/SuperAdmin/CreateAdmin.cshtml]
+[D:/GITHUB/web2.0/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/SuperAdmin/CreateAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwZXJBZG1pblxDcmVhdGVBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/c\#/SafeIn/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/SuperAdmin/Index.cshtml]
+[D:/GITHUB/web2.0/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/SuperAdmin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwZXJBZG1pblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/c\#/SafeIn/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/UserManagement/Edit.cshtml]
+[D:/GITHUB/web2.0/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/UserManagement/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck1hbmFnZW1lbnRcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/c\#/SafeIn/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/UserManagement/Login.cshtml]
+[D:/GITHUB/web2.0/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/UserManagement/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck1hbmFnZW1lbnRcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/c\#/SafeIn/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/_ViewImports.cshtml]
+[D:/GITHUB/web2.0/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/c\#/SafeIn/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/_ViewStart.cshtml]
+[D:/GITHUB/web2.0/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Study/c\#/SafeIn/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/Shared/_Layout.cshtml]
+[D:/GITHUB/web2.0/SafeIn_Web/SafeIn_mvs_test/SafeIn_mvs_test/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-7nzusfluc9
